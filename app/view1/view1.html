@@ -1,1 +1,24 @@
-<p>This is the partial for view 1.</p>
+<div ng-show="!showTable">
+	<h3> How many friends? </h3>
+
+<input type="number" ng-model="noOfFriends" ng-disabled=true />
+<input type="button" value="Add" ng-click="addNumber()"/>
+<br/>
+</div>
+
+<div ng-show="showTable">
+
+<h3>Please enter the names of all the {{noOfFriends}} friends </h3>
+
+<table style="width:100%; margin-bottom:20px">
+  <tr ng-repeat="fr in friends">
+	<td>
+		<input type="text" value={{fr.name}} ng-modal="{{fr.name}}" ng-disabled=true />
+	</td>	
+  </tr>
+</table>
+
+<input type="button" value= "View Transactions" ng-click="addData()" />
+<br/>
+
+</div>
