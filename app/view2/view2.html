@@ -1,1 +1,25 @@
-<p>This is the partial for view 2.</p>
+<div>
+<h3 style="color:#2980b9; margin-left:160px"> Transaction details </h3>
+<table style="width:40%">
+  <tr>
+    <th>From</th>
+    <th>To</th> 
+    <th>Amount</th>
+  </tr>
+  
+  <tr ng-repeat="fr in transactions">
+	<td style="text-align:center">{{fr.from}}</td>
+	<td style="text-align:center">{{fr.to}}</td>
+	<td style="text-align:center">{{fr.amt}}</td>
+  </tr>
+</table>
+<input type="button" value="Minimize Cash Flow" ng-click="minimizeCashFlow()"/>
+</div>
+
+
+
+
+
+
+
+
