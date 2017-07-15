@@ -17,14 +17,6 @@ angular.module('myApp.view2', ['ngRoute'])
 	return {getTransactionsJson: getTransactions}
 })
 
-.service('friendService', function($http) {
-	function getFriends() 
-	{
-		var promise = $http({ method: 'GET', url: 'json/friends.json', cache : true });
-		return promise;
-	}
-	return {getFriendsJson: getFriends}
-})
 
 .controller('View2Ctrl', ['$scope', '$http', 'transactionService', 'friendService', 
 	function($scope, $http, transactionService, friendService) {
@@ -34,7 +26,7 @@ transactionService.getTransactionsJson()
 	$scope.transactions = response.data;
 });
 
-friendService.getFriendsJson()
+friendService.getFriendNamesJson()
 .then(function success(response) {
         $scope.friends = response.data;  
         $scope.noOfFriends = response.data.length;        
