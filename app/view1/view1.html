@@ -3,12 +3,14 @@
 
 <input type="number" ng-model="noOfFriends" ng-disabled=true />
 <input type="button" value="Add" ng-click="addNumber()"/>
+<p style="color:red; font-size:12px; margin-top:3px">***Improvement: Take input from user***</p>
 <br/>
 </div>
 
 <div ng-show="showTable">
 
 <h3>Please enter the names of all the {{noOfFriends}} friends </h3>
+<p style="color:red; font-size:12px; margin-bottom:3px">**Improvement: Should be manually enter the names of friends**</p>
 
 <table style="width:100%; margin-bottom:20px">
   <tr ng-repeat="fr in friends">

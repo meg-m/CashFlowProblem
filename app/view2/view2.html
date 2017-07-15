@@ -1,19 +1,19 @@
 <div>
 <h3 style="color:#2980b9; margin-left:160px"> Transaction details </h3>
-<table style="width:40%">
-  <tr>
+<table class="table" style="width:40%">
+  <tr class="row header">
     <th>From</th>
     <th>To</th> 
     <th>Amount</th>
   </tr>
   
-  <tr ng-repeat="fr in transactions">
-	<td style="text-align:center">{{fr.from}}</td>
-	<td style="text-align:center">{{fr.to}}</td>
-	<td style="text-align:center">{{fr.amt}}</td>
+  <tr class="row" ng-repeat="fr in transactions">
+	<td class="cell" style="text-align:center">{{fr.from}}</td>
+	<td class="cell" style="text-align:center">{{fr.to}}</td>
+	<td class="cell" style="text-align:center">{{fr.amt}}</td>
   </tr>
 </table>
-<input type="button" value="Minimize Cash Flow" ng-click="minimizeCashFlow()"/>
+<input type="button" class="btn"  value="Minimize Cash Flow" ng-click="minimizeCashFlow()"/>
 </div>
 
 
